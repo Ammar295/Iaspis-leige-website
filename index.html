@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IASPIS — Waffles & Coffee</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">IASPIS</a>
+            
+            <nav class="desktop-nav">
+                <a href="#home" data-key="navHome">Home</a>
+                <a href="#about" data-key="navAbout">About</a>
+                <a href="#menu" data-key="navMenu">Menu</a>
+                <a href="#contact" data-key="navContact">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+                    <i class="ri-global-line"></i>
+                    <span class="lang-text">EN</span>
+                </button>
+                
+                <button class="cart-toggle" id="cartToggle" aria-label="Open cart">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                
+                <a href="#menu" class="nav-button" data-key="navViewMenu">View Menu</a>
+                
+                <button class="mobile-menu-button" id="mobileMenuButton">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" data-key="navHome">Home</a>
+            <a href="#about" data-key="navAbout">About</a>
+            <a href="#menu" data-key="navMenu">Menu</a>
+            <a href="#contact" data-key="navContact">Contact</a>
+            <button class="mobile-lang-toggle" id="mobileLangToggle">
+                <i class="ri-global-line"></i> <span>English</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 data-key="cartTitle">Your Order</h3>
+            <button class="cart-close" id="cartClose"><i class="ri-close-line"></i></button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <i class="ri-shopping-bag-line"></i>
+                <p data-key="cartEmpty">Your order is empty</p>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span data-key="cartTotal">Total</span>
+                <strong id="cartTotal">0.00 SAR</strong>
+            </div>
+            <button class="checkout-button" id="checkoutBtn" data-key="checkout">
+                <i class="ri-secure-payment-line"></i>
+                Proceed to Payment
+            </button>
+        </div>
+    </div>
+    
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+            <div class="hero-particles" id="heroParticles"></div>
+            
+            <div class="hero-content">
+                <span class="eyebrow animate-text" data-key="heroEyebrow">LIÈGE WAFFLES • COFFEE • DRINKS</span>
+                <h1 class="animate-text" data-key="heroHeading">Sweet moments, <span data-key="heroSpan">made better.</span></h1>
+                <p class="animate-text" data-key="heroText">Handmade Liège waffles and carefully crafted coffee, made to turn ordinary moments into something special.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#menu" class="primary-button" data-key="exploreMenu">
+                        Explore Menu <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="#about" class="secondary-button" data-key="ourStory">Our Story</a>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span data-key="scrollText">Scroll to explore</span>
+                <i class="ri-arrow-down-line"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="section-container about-grid">
+                <div class="about-image reveal">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1200&q=85" alt="Delicious waffles" loading="lazy">
+                    </div>
+                </div>
+                
+                <div class="about-content reveal">
+                    <span class="section-label" data-key="aboutLabel">ABOUT IASPIS</span>
+                    <h2 data-key="aboutHeading">A little sweetness <span data-key="aboutSpan">goes a long way.</span></h2>
+                    <p data-key="aboutText1">At IASPIS, we believe a waffle should be more than something you eat. It should be an experience.</p>
+                    <p data-key="aboutText2">From golden Liège waffles covered in delicious toppings to carefully brewed coffee and cold drinks, everything is prepared with attention to detail and a whole lot of love.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <strong>01</strong>
+                            <span data-key="stat1">Freshly made</span>
+                        </div>
+                        <div class="stat">
+                            <strong>02</strong>
+                            <span data-key="stat2">Premium ingredients</span>
+                        </div>
+                        <div class="stat">
+                            <strong>03</strong>
+                            <span data-key="stat3">Made with love</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="menu section" id="menu">
+            <div class="section-container">
+                <div class="section-heading reveal">
+                    <div>
+                        <span class="section-label" data-key="menuLabel">OUR MENU</span>
+                        <h2 data-key="menuHeading">Something for <span data-key="menuSpan">every craving.</span></h2>
+                    </div>
+                    <p data-key="menuText">Handmade Liège waffles and carefully crafted coffee &amp; drinks — prices in SAR, calories included.</p>
+                </div>
+                
+                <div class="menu-tabs">
+                    <button class="menu-tab active" data-category="all" data-key="tabAll">All</button>
+                    <button class="menu-tab" data-category="waffles" data-key="tabWaffles">Waffles</button>
+                    <button class="menu-tab" data-category="drinks" data-key="tabDrinks">Drinks</button>
+                </div>
+                
+                <div class="menu-grid" id="menuGrid">
+                    <!-- Waffle 1 -->
+                    <article class="menu-card reveal" data-category="waffles" style="--i:0">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=900&q=85" alt="Classic Liège Waffle" loading="lazy">
+                            <span class="popular" data-key="popular">Popular</span>
+                            <span class="calorie-tag">295 cal</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3 data-key="w1name">Classic Liège Waffle</h3>
+                                <strong>8.99 SAR</strong>
+                            </div>
+                            <p data-key="w1desc">Our signature Belgian brioche waffle, studded with caramelized pearl sugar.</p>
+                            <button class="order-button" data-id="waffle-1" data-name="Classic Liège Waffle" data-price="8.99" data-key="addOrder">Add to order <i class="ri-add-line"></i></button>
+                        </div>
+                    </article>
+                    
+                    <!-- Waffle 2 -->
+                    <article class="menu-card reveal" data-category="waffles" style="--i:1">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=900&q=85" alt="Chocolate Liège Waffle" loading="lazy">
+                            <span class="calorie-tag">375 cal</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3 data-key="w2name">Chocolate Liège Waffle</h3>
+                                <strong>14.95 SAR</strong>
+                            </div>
+                            <p data-key="w2desc">Warm Liège waffle finished with rich, silky chocolate.</p>
+                            <button class="order-button" data-id="waffle-2" data-name="Chocolate Liège Waffle" data-price="14.95" data-key="addOrder">Add to order <i class="ri-add-line"></i></button>
+                        </div>
+                    </article>
+                    
+                    <!-- Waffle 3 -->
+                    <article class="menu-card reveal" data-category="waffles" style="--i:2">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1576618148400-c5c8b6e4b5a0?auto=format&fit=crop&w=900&q=85" alt="Raffaello Liège Waffle" loading="lazy">
+                            <span class="calorie-tag">465 cal</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3 data-key="w3name">Raffaello Liège Waffle</h3>
+                                <strong>16.95 SAR</strong>
+                            </div>
+                            <p data-key="w3desc">Coconut, almond and creamy white chocolate, Raffaello-style.</p>
+                            <button class="order-button" data-id="waffle-3" data-name="Raffaello Liège Waffle" data-price="16.95" data-key="addOrder">Add to order <i class="ri-add-line"></i></button>
+                        </div>
+                    </article>
+                    
+                    <!-- Waffle 4 -->
+                    <article class="menu-card reveal" data-category="waffles" style="--i:3">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=85" alt="Pecan Liège Waffle" loading="lazy">
+                            <span class="calorie-tag">488 cal</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3 data-key="w4name">Pecan Liège Waffle</h3>
+                                <strong>17.95 SAR</strong>
+                            </div>
+                            <p data-key="w4desc">Toasted pecans and caramel over our classic Liège waffle.</p>
+                            <button class="order-button" data-id="waffle-4" data-name="Pecan Liège Waffle" data-price="17.95" data-key="addOrder">Add to order <i class="ri-add-line"></i></button>
+                        </div>
+                    </article>
+                    
+                    <!-- Waffle 5 -->
+                    <article class="menu-card reveal" data-category="waffles" style="--i:4">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85" alt="Baklava Liège Waffle" loading="lazy">
+                            <span class="calorie-tag">455 cal</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3 data-key="w5name">Baklava Liège Waffle</h3>
+                                <strong>21.95 SAR</strong>
+                            </div>
+                            <p data-key="w5desc">Layers of pistachio, honey and phyllo-crisp baklava crumble.</p>
+                            <button class="order-button" data-id="waffle-5" data-name="Baklava Liège Waffle" data-price="21.95" data-key="addOrder">Add to order <i class="ri-add-line"></i></button>
+                        </div>
+                    </article>
+                    
+                    <!-- Waffle 6 -->
+                    <article class="menu-card reveal" data-category="waffles" style="--i:5">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85" alt="Pizza Liège Waffle" loading="lazy">
+                            <span class="calorie-tag">540 cal</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3 data-key="w6name">Pizza Liège Waffle</h3>
+                                <strong>24.95 SAR</strong>
+                            </div>
+                            <p data-key="w6desc">Savory waffle topped with mozzarella, tomato sauce and Italian herbs.</p>
+                            <button class="order-button" data-id="waffle-6" data-name="Pizza Liège Waffle" data-price="24.95" data-key="addOrder">Add to order <i class="ri-add-line"></i></button>
+                        </div>
+                    </article>
+                    
+                    <!-- Waffle 7 -->
+                    <article class="menu-card reveal" data-category="waffles" style="--i:0">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=900&q=85" alt="Labneh and za'atar Liège Waffle" loading="lazy">
+                            <span class="calorie-tag">370 cal</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3 data-key="w7name">Labneh &amp; Za'atar Waffle</h3>
+                                <strong>16.95 SAR</strong>
+                            </div>
+                            <p data-key="w7desc">Creamy labneh, za'atar and a drizzle of olive oil on a savory waffle.</p>
+                            <button class="order-button" data-id="waffle-7" data-name="Labneh & Za'atar Waffle" data-price="16.95" data-key="addOrder">Add to order <i class="ri-add-line"></i></button>
+                        </div>
+                    </article>
+                    
+                    <!-- Drink 1 -->
+                    <article class="menu-card drink-card reveal" data-category="drinks" style="--i:1">
+                        <div class="menu-image menu-image-drink coffee-gradient">
+                            <i class="ri-cup-line drink-icon"></i>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title"><h3 data-key="d1name">Coffee of the Day</h3></div>
+                            <p data-key="d1desc">Served hot or cold.</p>
+                            <div class="size-options">
+                                <div class="size-row">
+                                    <div class="size-label"><span class="size-name" data-key="large">Large</span><span class="size-cal">2 cal</span></div>
+                                    <span class="size-price">6.95 SAR</span>
+                                    <button class="size-add" data-id="drink-1" data-name="Coffee of the Day" data-size="Large" data-price="6.95"><i class="ri-add-line"></i></button>
+                                </div>
+                                <div class="size-row">
+                                    <div class="size-label"><span class="size-name" data-key="small">Small</span><span class="size-cal">1 cal</span></div>
+                                    <span class="size-price">4.95 SAR</span>
+                                    <button class="size-add" data-id="drink-1" data-name="Coffee of the Day" data-size="Small" data-price="4.95"><i class="ri-add-line"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Drink 2 -->
+                    <article class="menu-card drink-card reveal" data-category="drinks" style="--i:2">
+                        <div class="menu-image menu-image-drink coffee-gradient-alt">
+                            <i class="ri-drop-line drink-icon"></i>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title"><h3 data-key="d2name">V60</h3></div>
+                            <p data-key="d1desc">Served hot or cold.</p>
+                            <div class="size-options">
+                                <div class="size-row">
+                                    <div class="size-label"><span class="size-name" data-key="large">Large</span><span class="size-cal">3 cal</span></div>
+                                    <span class="size-price">10.50 SAR</span>
+                                    <button class="size-add" data-id="drink-2" data-name="V60" data-size="Large" data-price="10.50"><i class="ri-add-line"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Drink 3 -->
+                    <article class="menu-card drink-card reveal" data-category="drinks" style="--i:3">
+                        <div class="menu-image menu-image-drink coffee-gradient">
+                            <i class="ri-goblet-line drink-icon"></i>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title"><h3 data-key="d3name">Cold Brew</h3></div>
+                            <p data-key="d3desc">Served cold.</p>
+                            <div class="size-options">
+                                <div class="size-row">
+                                    <div class="size-label"><span class="size-name" data-key="large">Large</span><span class="size-cal">3 cal</span></div>
+                                    <span class="size-price">13.00 SAR</span>
+                                    <button class="size-add" data-id="drink-3" data-name="Cold Brew" data-size="Large" data-price="13.00"><i class="ri-add-line"></i></button>
+                                </div>
+                                <div class="size-row">
+                                    <div class="size-label"><span class="size-name" data-key="small">Small</span><span class="size-cal">1 cal</span></div>
+                                    <span class="size-price">11.50 SAR</span>
+                                    <button class="size-add" data-id="drink-3" data-name="Cold Brew" data-size="Small" data-price="11.50"><i class="ri-add-line"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Drink 4 -->
+                    <article class="menu-card drink-card reveal" data-category="drinks" style="--i:4">
+                        <div class="menu-image menu-image-drink coffee-gradient-alt">
+                            <i class="ri-flask-line drink-icon"></i>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title"><h3 data-key="d4name">Nitro Cold Brew</h3></div>
+                            <p data-key="d3desc">Served cold.</p>
+                            <div class="size-options">
+                                <div class="size-row">
+                                    <div class="size-label"><span class="size-name" data-key="large">Large</span><span class="size-cal">19 cal</span></div>
+                                    <span class="size-price">14.00 SAR</span>
+                                    <button class="size-add" data-id="drink-4" data-name="Nitro Cold Brew" data-size="Large" data-price="14.00"><i class="ri-add-line"></i></button>
+                                </div>
+                                <div class="size-row">
+                                    <div class="size-label"><span class="size-name" data-key="small">Small</span><span class="size-cal">13 cal</span></div>
+                                    <span class="size-price">12.00 SAR</span>
+                                    <button class="size-add" data-id="drink-4" data-name="Nitro Cold Brew" data-size="Small" data-price="12.00"><i class="ri-add-line"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Drink 5 -->
+                    <article class="menu-card drink-card reveal" data-category="drinks" style="--i:5">
+                        <div class="menu-image menu-image-drink karkadeh-gradient">
+                            <i class="ri-leaf-line drink-icon"></i>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title"><h3 data-key="d5name">Karkadeh</h3></div>
+                            <p data-key="d3desc">Served cold.</p>
+                            <div class="size-options">
+                                <div class="size-row">
+                                    <div class="size-label"><span class="size-name" data-key="large">Large</span><span class="size-cal">111 cal</span></div>
+                                    <span class="size-price">9.00 SAR</span>
+                                    <button class="size-add" data-id="drink-5" data-name="Karkadeh" data-size="Large" data-price="9.00"><i class="ri-add-line"></i></button>
+                                </div>
+                                <div class="size-row">
+                                    <div class="size-label"><span class="size-name" data-key="small">Small</span><span class="size-cal">83 cal</span></div>
+                                    <span class="size-price">7.00 SAR</span>
+                                    <button class="size-add" data-id="drink-5" data-name="Karkadeh" data-size="Small" data-price="7.00"><i class="ri-add-line"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="cta-overlay"></div>
+            <div class="cta-content reveal">
+                <span class="section-label" data-key="ctaLabel">COME VISIT US</span>
+                <h2 data-key="ctaHeading">Your next sweet <span data-key="ctaSpan">moment awaits.</span></h2>
+                <p data-key="ctaText">Come by, grab your favorite waffle and make an ordinary day a little sweeter.</p>
+                <a href="https://maps.app.goo.gl/1e9cPvfCWY1U9W1D8?g_st=iw" class="primary-button" target="_blank" rel="noopener" data-key="findUs">
+                    Find Us <i class="ri-map-pin-line"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="section-container">
+                <div class="contact-grid">
+                    <div class="contact-content reveal">
+                        <span class="section-label" data-key="contactLabel">CONTACT</span>
+                        <h2 data-key="contactHeading">Let's make your <span data-key="contactSpan">day sweeter.</span></h2>
+                        <p data-key="contactText">Have a question, want to visit us or simply craving something sweet? We'd love to hear from you.</p>
+                    </div>
+                    
+                    <div class="contact-info reveal">
+                        <a href="https://maps.app.goo.gl/1e9cPvfCWY1U9W1D8?g_st=iw" class="contact-item" target="_blank" rel="noopener">
+                            <div class="contact-icon"><i class="ri-map-pin-line"></i></div>
+                            <div><span data-key="visitUs">Visit us</span><p data-key="location">Al Khobar, Saudi Arabia</p></div>
+                        </a>
+                        <a href="tel:+966567044528" class="contact-item">
+                            <div class="contact-icon"><i class="ri-phone-line"></i></div>
+                            <div><span data-key="callUs">Call us</span><p>+966 56 704 4528</p></div>
+                        </a>
+                        <a href="https://www.instagram.com/laspisliege?igsh=cDk3bTBvbHVtaWQ=" class="contact-item" target="_blank" rel="noopener">
+                            <div class="contact-icon"><i class="ri-instagram-line"></i></div>
+                            <div><span data-key="followUs">Follow us</span><p>@laspisliege</p></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container footer-container">
+            <div class="footer-logo">IASPIS</div>
+            <p data-key="footerText">Waffles, coffee &amp; sweet moments.</p>
+            <div class="socials">
+                <a href="https://www.instagram.com/laspisliege?igsh=cDk3bTBvbHVtaWQ=" target="_blank" rel="noopener"><i class="ri-instagram-line"></i></a>
+                <a href="https://www.tiktok.com/@iaspisliege?_r=1&amp;_t=ZS-991SViZJmMS" target="_blank" rel="noopener"><i class="ri-tiktok-line"></i></a>
+                <a href="#"><i class="ri-whatsapp-line"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 IASPIS. All rights reserved.</div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="ri-check-line"></i>
+        <span data-key="addedToast">Added to your order</span>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="payment-modal" id="paymentModal">
+        <div class="payment-modal-content">
+            <button class="payment-close" id="paymentClose"><i class="ri-close-line"></i></button>
+            <h2 data-key="paymentTitle">Complete Your Order</h2>
+            <p class="payment-total" data-key="paymentTotal">Total: <strong id="paymentTotal">0.00 SAR</strong></p>
+            
+            <!-- Payment Methods - Saudi style -->
+            <div class="payment-methods">
+                <button class="payment-method active" data-method="mada">
+                    <span style="font-weight:700;font-size:14px;color:var(--gold-light);">MADA</span>
+                    <span data-key="mada">بطاقة مدى</span>
+                </button>
+                <button class="payment-method" data-method="stcpay">
+                    <span style="font-weight:700;font-size:14px;color:#E91E63;">STC</span>
+                    <span data-key="stcpay">إس تي سي باي</span>
+                </button>
+                <button class="payment-method" data-method="applepay">
+                    <i class="ri-apple-line" style="font-size:18px;"></i>
+                    <span data-key="applePay">Apple Pay</span>
+                </button>
+            </div>
+            
+            <!-- Payment Form -->
+            <form class="payment-form" id="paymentForm">
+                <div class="form-group">
+                    <label data-key="cardNumber">رقم البطاقة</label>
+                    <input type="text" placeholder="4578 1234 5678 9012" maxlength="19" id="cardNumber">
+                    <span class="card-brand" id="cardBrand"></span>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-key="expiry">تاريخ الانتهاء</label>
+                        <input type="text" placeholder="MM/YY" maxlength="5" id="expiryDate">
+                    </div>
+                    <div class="form-group">
+                        <label data-key="cvv">رمز التحقق</label>
+                        <input type="text" placeholder="123" maxlength="4" id="cvv">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label data-key="cardholder">اسم حامل البطاقة</label>
+                    <input type="text" placeholder="أحمد محمد" id="cardholderName">
+                </div>
+                
+                <div class="payment-brands">
+                    <span>تقبل الدفع عبر:</span>
+                    <span style="font-weight:700;font-size:13px;color:var(--gold-light);">MADA</span>
+                    <span style="font-weight:700;font-size:13px;color:#E91E63;">STC</span>
+                    <span style="font-weight:600;font-size:13px;color:#555;">Apple Pay</span>
+                    <span style="color:var(--muted);font-size:9px;">🛡️ مشفر بالكامل</span>
+                </div>
+                
+                <button type="submit" class="pay-button" data-key="payNow">
+                    <i class="ri-secure-payment-line"></i>
+                    ادفع الآن
+                </button>
+            </form>
+            
+            <div class="payment-secure">
+                <i class="ri-lock-line"></i>
+                <span data-key="secureText">مؤمن بواسطة مدى • STC Pay • Apple Pay</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
